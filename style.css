@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(/images/bg-desktop.svg);
+    background-color: var(--Violet);
+    font-size: 14px;
+    min-height: 90vh;
+    overflow: auto;
+}
+
+header{
+    padding: 30px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+}
+
+.con2 h1{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    width: 350px;
+    padding-top: 30px;
+}
+
+.con2 p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: white;
+    width: 400px;
+    padding-bottom: 15px;
+}
+
+.con2{
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+button{
+    outline: none;
+    width: 240px;
+    height: 40px;
+    border-radius: 60px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+button:is(:hover, :focus) {
+    color: white;
+    background-color: var(--Soft-Magenta);
+  }
+
+.social {
+    display: flex;
+    color: white;
+    justify-content: flex-end;
+    padding-right: 3.6em;
+    text-decoration: none;
+    gap: 3px;
+}
+
+a.social-icons {
+    color: white;
+    border: 1px solid whitesmoke;
+    display: grid;
+    place-content: center;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    margin: 0 0.5em;
+    text-decoration: none;
+    transition: .5s;
+}
+
+a.social-icons:is(:hover, :focus) {
+    color: var(--Soft-Magenta);
+    border-color: var(--Soft-Magenta);
+  }
+  a.social-icons i {
+    font-size: 20px;
+  }
+
+@media screen and (max-width: 375px) {
+    body{
+        background-image: url(/images/bg-mobile.svg);
+        background-repeat: no-repeat;
+    }
+
+    header img{
+        width: 150px;
+    }
+        
+    .container{
+        padding-left: 70px;
+        margin: 1px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .con1 img{
+        width: 300px;
+        height: 250px;
+    }
+
+    .con2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .con2 p{
+        width: 87%;
+        font-size: 16px;
+    }
+
+}
